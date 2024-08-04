@@ -11,6 +11,10 @@ export default defineConfig({
     },
   },
   css: {
-    minify: true,
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "@/assets/style.scss";`,
+      },
+    },
   },
 });

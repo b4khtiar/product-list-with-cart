@@ -1,30 +1,53 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import Cart from "@/components/Cart.vue";
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+  <main class="wrapper">
+    <h1 class="title">Desserts</h1>
+    <Cart />
+  </main>
+  <footer class="footer">
+    <p class="footer__text">
+      Challenge by
+      <a
+        class="footer__link"
+        href="http://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Frontendmentor</a
+      >
+      Coded by
+      <a
+        class="footer__link"
+        href="https://github.com/b4khtiar"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Bakhtiar</a
+      >.
+    </p>
+  </footer>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+<style lang="scss" scoped>
+.title {
+  font-size: 2.6rem;
+  color: $rose-900;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  padding: 0 1rem;
+
+  &__text {
+    font-size: 14px;
+  }
+
+  &__link {
+    color: $green;
+  }
 }
 </style>

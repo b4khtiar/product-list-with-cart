@@ -5,14 +5,22 @@ const price = 6.5;
 </script>
 
 <template>
-  <article class="product-card">
-    <img class="product-card__image" src="#" :alt="title" />
-    <h3 class="product-card__category">{{ category }}</h3>
-    <p class="product-card__name">{{ name }}</p>
-    <p class="product-card__price">{{ price }}</p>
+  <article class="product__card">
+    <img class="product__image" src="#" :alt="'picture of ' + name" />
+    <h3 class="product__category">{{ category }}</h3>
+    <p class="product__name">{{ name }}</p>
+    <p class="product__price">{{ price }}</p>
 
-    <div class="product-card__action">
-      <button class="product-card__button">Add to cart</button>
+    <div class="product__action">
+      <button class="product__button">Add to cart</button>
     </div>
   </article>
 </template>
+
+<style lang="scss" scoped>
+.product {
+  &__card {
+    border: 1px solid gray;
+  }
+}
+</style>

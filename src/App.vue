@@ -1,11 +1,21 @@
 <script setup>
 import Cart from "@/components/Cart.vue";
+import ProductCard from "@/components/ProductCard.vue";
 </script>
 
 <template>
-  <main class="wrapper">
-    <h1 class="title">Desserts</h1>
-    <Cart />
+  <main class="container">
+    <h1 class="app-title">Desserts</h1>
+    <div class="product">
+      <div class="product__container">
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+      </div>
+      <Cart />
+    </div>
   </main>
   <footer class="footer">
     <p class="footer__text">
@@ -30,9 +40,9 @@ import Cart from "@/components/Cart.vue";
 </template>
 
 <style lang="scss" scoped>
-.title {
+.app-title {
   font-size: 2.6rem;
-  color: $rose-900;
+  margin-bottom: 2rem;
 }
 
 .footer {

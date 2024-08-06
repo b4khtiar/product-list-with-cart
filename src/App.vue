@@ -1,6 +1,7 @@
 <script setup>
 import Cart from "@/components/Cart.vue";
 import ProductCard from "@/components/ProductCard.vue";
+import products from "./data.json";
 </script>
 
 <template>
@@ -8,13 +9,14 @@ import ProductCard from "@/components/ProductCard.vue";
     <h1 class="app-title">Desserts</h1>
     <div class="product">
       <div class="product__container">
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        <ProductCard
+          v-for="product in products"
+          :key="product.id"
+          :product="product" />
       </div>
-      <Cart />
+      <div class="product__cart">
+        <Cart />
+      </div>
     </div>
   </main>
   <footer class="footer">

@@ -12,10 +12,10 @@
   "dependencies": {
     "pinia": "^2.2.1",
     "sass": "^1.77.8",
-    "vue": "^3.4.35"
+    "vue": "^3.4.37"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.2",
-    "vite": "^5.3.5"
+    "vite": "^5.4.0"
   }
 }

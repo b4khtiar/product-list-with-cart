@@ -30,6 +30,12 @@ main {
   padding: 1.5rem;
 }
 
+@include mix.breakpoint-up(sm) {
+  .container {
+    width: 540px;
+  }
+}
+
 @include mix.breakpoint-up(md) {
   .container {
     width: 720px;
